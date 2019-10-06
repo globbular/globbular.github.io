@@ -1,0 +1,215 @@
+const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'W'];
+const categories = [
+'A boy’s name',
+'A river',
+'An animal',
+'Something that is cold',
+'An insect',
+'A TV Show',
+'Something that grows',
+'A fruit',
+'Something that is black',
+'A school subject',
+'A movie title',
+'A musical instrument',
+'An author',
+'A body of water',
+'A bird',
+'A country',
+'A cartoon character',
+'A holiday destination',
+'Something that is square',
+'A piece of clothing',
+'A relative',
+'A game',
+'A sports star',
+'A school item',
+'Something that is hot',
+'A hero',
+'A girl’s name',
+'A fear',
+'A TV star',
+'A colour',
+'A fish',
+'A county',
+'A state or province',
+'A piece of sports equipment',
+'A tool',
+'A breakfast food',
+'A gift',
+'A flower',
+'A drink',
+'A toy',
+'A city',
+'Something that is in the kitchen',
+'Something that is in ocean',
+'A nickname',
+'A hobby',
+'A part of the body',
+'A sandwich',
+'A world leader',
+'A politician',
+'An excuse for being late',
+'An ice cream flavour',
+'Something that jumps/bounces',
+'Something that is in a park',
+'A foreign city',
+'A stone or gem',
+'Something that is the sky',
+'A pizza topping',
+'A university/college',
+'Something that has spots',
+'A historical figure',
+'Something you’re afraid of',
+'A term of endearment',
+'Something that is in this room',
+'A drug',
+'A fictional character',
+'A menu item',
+'A magazine/newspaper',
+'A capital city',
+'A type of sweet/candy',
+'Something that you save up to buy',
+'A type of shoe',
+'Something you keep hidden',
+'An item in a suitcase',
+'Something with a tail',
+'A crime',
+'Something that is sticky',
+'An award/ceremony',
+'A car make/model',
+'A spice/herb',
+'A bad habit',
+'A cosmetic/toiletry',
+'A celebrity',
+'A cooking utensil',
+'A reptile/amphibian',
+'A leisure activity',
+'Something that you’re allergic to',
+'A restaurant',
+'A notorious person',
+'Something that is in a medicine cabinet',
+'A household chore',
+'A costume',
+'A weapon',
+'Something that is round',
+'A word associated with exercise',
+'A sport',
+'A song title',
+'An ethnic food',
+'Something that you shout',
+'A way to get from here to there',
+'A villain',
+'Something that you replace',
+'A famous duo/trio',
+'Something found in a desk',
+'A disease',
+'A word associated with money',
+'An item in a vending machine',
+'Something that you wear',
+'An alcoholic drink',
+'A soft drink',
+'Something at a circus',
+'A vegetable',
+'Something that you throw away',
+'An occupation',
+'An appliance',
+'A type of drink',
+'A music artist/group',
+'A shop/store name',
+'A tree',
+'A personality trait',
+'A video game',
+'A gadget',
+'A board game',
+'Something that uses a remote',
+'A card game',
+'An offensive word',
+'Something that is wireless',
+'A computer program',
+'A website',
+'Something that is in a grocery store',
+'A reason to quit your job',
+'Something that has stripes',
+'A tourist attraction',
+'Something found in a hospital',
+'A food/drink that is green',
+'A weekend activity',
+'An acronym',
+'A Seafood',
+'A christmas song',
+'A word with double letters',
+'A children’s book',
+'Something found at a bar',
+'A food you eat raw',
+'A place in Europe',
+'A place in Asia',
+'A place in America',
+'An olympic event',
+'Something you see at the zoo',
+'A animal in a book/movie',
+'Something you do at a party',
+'Something you get tickets for',
+'Something you do at work',
+'A foreign word used in English',
+'Something you shouldn’t touch',
+'A spicy food',
+'Something at a carnival',
+'Something you make',
+'An animal noise',
+'Something you buy for kids',
+'Something that can kill you',
+'Words associated with winter',
+'Something to do on a date',
+'A historic event',
+'Something you store items in',
+'Something you do everyday',
+'Something you get in the mail',
+'Something you sit/on',
+'A reason to make a phone call',
+'A type of weather',
+'A title people can have',
+'Something that has buttons',
+'Something that has wheels',
+'Something that makes you smile',
+'Something that can get you fired',
+'An artist/sculptor'];
+
+const cat_length = categories.length;
+const letter_length = 20;
+const catElem = document.getElementById("roundCat");
+const letterElem = document.getElementById("roundLetter");
+const fade1Group = document.getElementById("fade1");
+const fade2Group = document.getElementById("fade2");
+const startButton = document.getElementById("roundStarter");
+var firstPlay = true;
+
+function startRound() {
+    resetRound();
+    if (firstPlay) {
+        firstPlay = false;
+        startButton.innerText = "▶ Play again";
+    }
+    let cat_to_use = categories[Math.floor(Math.random() * cat_length)];
+    let letter_to_use = letters[Math.floor(Math.random() * letter_length)];
+    catElem.innerText = cat_to_use;
+    letterElem.innerText = letter_to_use;
+
+    fade1Group.classList.add("fade1in");
+    fade2Group.classList.add("fade2in");
+
+    setTimeout(function() {
+        startButton.style.display = "inline-block";
+    },8000);
+}
+function resetRound() {
+    startButton.style.display = "none";
+    fade1Group.classList.remove("fade1in");
+    void fade1Group.offsetWidth;
+    fade2Group.classList.remove("fade2in");
+    void fade2Group.offsetWidth;
+
+    catElem.innerText = "";
+    letterElem.innerText = "";
+
+}

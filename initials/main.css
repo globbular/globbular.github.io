@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Almarai';
+    src: url('./Almarai-Regular.ttf') format("truetype");
+}
+body {
+    margin: 0;
+    background: #6d0303;
+    color: #f3f0f0;
+    font-family: 'Almarai';
+    font-size: 2em;
+    text-align: center;
+    padding-top: 130px;
+}
+.fade {
+    opacity: 0;
+}
+.fadein {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+    transition-delay: 1s;
+}
+button {
+    width: 250px;
+    height: 70px;
+    background: none;
+    font-size: 1em;
+    border: 2px solid #f3f0f0;
+    color: #f3f0f0;
+    font-family: 'Almarai';
+}
+#roundLetter {
+    font-size: 4em;
+}

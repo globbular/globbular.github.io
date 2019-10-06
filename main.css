@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Almarai';
+    src: url('./Almarai-Regular.ttf') format("truetype");
+}
+body {
+    margin: 0;
+    background: #c04d00;
+    color: #f3f0f0;
+    font-family: 'Almarai';
+    font-size: 2em;
+    text-align: center;
+    padding-top: 70px;
+}
+a {
+    padding: 15px;
+    width: 400px;
+    display: inline-block;
+    background: none;
+    text-decoration: none;
+    font-size: 0.8em;
+    border: 2px solid #f3f0f0;
+    color: #f3f0f0;
+    font-family: 'Almarai';
+    margin-top: 20px;
+}
+li {
+    list-style: none;
+}
