@@ -10,8 +10,12 @@
 }
 .img-scan {
     padding: 1em;
-    max-height: 300px;
     justify-content: center;
+}
+.receiptDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .date-time-field > input {
     display: block;
@@ -70,6 +74,11 @@ main {
     }
     #receiptEntry {
         flex-direction: row;
+    }
+    .receiptDesc {
+        display: flex;
+        flex-direction: row;
+        align-items: unset;
     }
     .listTitleLarge {
         display: flex !important;
