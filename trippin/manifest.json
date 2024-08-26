@@ -1,0 +1,19 @@
+{
+    "short_name": "Trippin'",
+    "name": "Trippin'",
+    "icons": [
+        {
+            "src": "./favicon.png",
+            "sizes": "64x64",
+            "type": "image/png"
+          },
+      {
+        "src": "./favicon.svg",
+        "sizes": "any"
+      }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#FC00FF",
+    "background_color": "#ffffff"
+  }

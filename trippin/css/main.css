@@ -46,6 +46,21 @@
     background-color: #008dde;
     background-image: linear-gradient(90deg, #008dde 0%, #FC00FF 100%);
 }
+.btn-outline-secondary,.btn-outline-dark {
+    border: none;
+}
+.hover-red:hover, .hover-red:focus, .hover-red:active {
+   background-color: var(--bs-danger) !important;
+}
+.img-print {
+    max-width: 180mm;
+    max-height: 257mm;
+    width: auto;
+    height: auto;
+}
+.page-print {
+    break-before: page;
+}
 main {
     flex-direction: column;
 }

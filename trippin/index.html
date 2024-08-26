@@ -3,14 +3,16 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="/trippin/favicon.png" />
+		<link rel="manifest" href="/trippin/manifest.json" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="/trippin/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="/trippin/css/main.css" />
 		
-		<link rel="modulepreload" href="/trippin/_app/immutable/entry/start.HALpruXC.js">
-		<link rel="modulepreload" href="/trippin/_app/immutable/chunks/entry.Bcx0gHF-.js">
+		
+		<link rel="modulepreload" href="/trippin/_app/immutable/entry/start.B1lHIH0Z.js">
+		<link rel="modulepreload" href="/trippin/_app/immutable/chunks/entry.B-GDDLwS.js">
 		<link rel="modulepreload" href="/trippin/_app/immutable/chunks/scheduler.B6UoHciB.js">
-		<link rel="modulepreload" href="/trippin/_app/immutable/entry/app.CqHrPd6l.js">
+		<link rel="modulepreload" href="/trippin/_app/immutable/entry/app.5y0ubql2.js">
 		<link rel="modulepreload" href="/trippin/_app/immutable/chunks/preload-helper.D6kgxu3v.js">
 		<link rel="modulepreload" href="/trippin/_app/immutable/chunks/index.CC47NhgM.js">
 	</head>
@@ -18,7 +20,7 @@
 		<div style="display: contents">
 			<script>
 				{
-					__sveltekit_rstmgn = {
+					__sveltekit_8e54r5 = {
 						base: "/trippin",
 						assets: "/trippin"
 					};
@@ -26,11 +28,17 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/trippin/_app/immutable/entry/start.HALpruXC.js"),
-						import("/trippin/_app/immutable/entry/app.CqHrPd6l.js")
+						import("/trippin/_app/immutable/entry/start.B1lHIH0Z.js"),
+						import("/trippin/_app/immutable/entry/app.5y0ubql2.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('/trippin/service-worker.js');
+						});
+					}
 				}
 			</script>
 		</div>
