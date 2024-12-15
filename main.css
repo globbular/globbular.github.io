@@ -4,12 +4,12 @@
 }
 body {
     margin: 0;
-    background: #c04d00;
+    background: #2b2b2b;
     color: #f3f0f0;
     font-family: 'Almarai';
-    font-size: 2em;
+    font-size: 1.3em;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 40px;
 }
 a {
     padding: 15px;
@@ -23,6 +23,18 @@ a {
     font-family: 'Almarai';
     margin-top: 20px;
 }
+a:hover {
+    background-color: #575757;
+}
+strong {
+    font-size: 1.2em;
+}
+ul {
+    padding: 0;
+}
 li {
     list-style: none;
+}
+hr {
+    color: #a9a9a9;
 }
