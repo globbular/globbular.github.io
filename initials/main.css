@@ -28,6 +28,10 @@ button {
     color: #f3f0f0;
     font-family: 'Almarai';
 }
+button:hover {
+    background: #ffffff26;
+    cursor: pointer;
+}
 #roundLetter {
     font-size: 4em;
 }
