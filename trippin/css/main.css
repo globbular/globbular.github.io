@@ -70,6 +70,8 @@
     src: url(../font/700.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
+
 /* tweaks for dark mode on svelecte & datePicker*/
 :root {
     --sv-control-bg: none;
@@ -85,6 +87,9 @@
 .sv-item--btn {
     border-radius: 0px !important;
 }
+
+
+
 body {
     font-family: 'Atkinson Hyperlegible';
 }
@@ -131,7 +136,14 @@ h1,h2,h3,h4,h5,h6 {
     width: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-
+    position: fixed;
+    --bs-bg-opacity: 0.8;
+    z-index: 3;
+}
+#tripToggle {
+  min-height: calc(100vh - 64px);
+  border-radius: unset;
+  backdrop-filter: blur(3px);
 }
 .listTitleLarge {
     display: none !important;
@@ -201,9 +213,6 @@ main {
     }
 }
 @media (min-width: 768px) {
-    .listTitleSmall{
-        display: none !important;
-    }
     #receiptEntry {
         flex-direction: row;
     }
@@ -211,6 +220,17 @@ main {
         display: block;
         text-align: unset;
     }
+}
+@media (min-width: 998px) {
+    #tripToggle {
+        min-height: unset;
+        background: unset;
+        border-radius: unset;
+    }
+    .listTitleSmall{
+        display: none !important;
+    }
+   
     .listTitleLarge {
         display: flex !important;
     }
@@ -218,11 +238,12 @@ main {
         flex-direction: row;
     }
     .tripList {
-        height: 100vh;
-        min-height: 100vh;
+        height: calc(100vh - 64px);
         overflow-x: hidden;
         overflow-y: auto;
         width: 380px;
+        position: initial;
+        --bs-bg-opacity: 1;
     }
     .img-scan {
         max-height: unset;
